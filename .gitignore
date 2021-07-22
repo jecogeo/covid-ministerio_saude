@@ -146,3 +146,6 @@ cython_debug/
 
 # Ignora os CSV, pois são grandes para ir pro github
 *.csv
+
+# Ignora os arquivos .rar
+*.rar
