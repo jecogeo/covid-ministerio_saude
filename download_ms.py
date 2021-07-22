@@ -63,15 +63,15 @@ browser.find_element_by_xpath("//ion-button[contains(text(),'Arquivo')]").click(
 
 # assim que baixar o arquivo .rar, fecha o browser
 while not filename:
-    time.sleep(1)
     filename = glob(BASE_FOLDER+'*.rar')
+    time.sleep(5)
 
 browser.quit()
 # In[7]:
 
 # extraindo o arquivo RAR
 program = '/usr/bin/7z' if 'posix' in OS_SYSTEM else ''
-patoolib.extract_archive(filename, outdir=BASE_FOLDER, program=program)
+patoolib.extract_archive(filename[0], outdir=BASE_FOLDER, program=program)
                          
 
 # In[8]:
